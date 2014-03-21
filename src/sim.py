@@ -3,6 +3,7 @@ import scheduler
 class Sim(object):
     scheduler = scheduler.Scheduler()
     debug = False
+    nodes = []
 
     @staticmethod
     def set_debug(value):

@@ -1,7 +1,7 @@
 import sys
 sys.path.append('..')
 
-from src import node, link, graph
+from src import sim, node, link, graph
 
 if __name__ == '__main__':
     # setup network
@@ -77,15 +77,15 @@ if __name__ == '__main__':
     # Begin graphs
 
     # Graph a simple network
-    g1 = graph.Graph(node.allNodes)
+    g1 = graph.Graph(sim.Sim.nodes)
     g1.write_png('graphs/network.png')
 
     # Graph the route from n2 to n5 in the network
-    g2 = graph.Graph(node.allNodes)
+    g2 = graph.Graph(sim.Sim.nodes)
     g2.overlay_path('n2', 'n5', color='red')
     g2.write_png('graphs/path.png')
 
     # Graph all paths to n1 in the network
-    g3 = graph.Graph(node.allNodes)
+    g3 = graph.Graph(sim.Sim.nodes)
     g3.overlay_all_paths('n1', color='blue')
     g3.write_png('graphs/all_paths.png')

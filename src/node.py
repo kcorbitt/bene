@@ -1,8 +1,6 @@
 from sim import Sim
 import copy
 
-allNodes = []
-
 class Node(object):
     def __init__(self,hostname):
         self.hostname = hostname
@@ -10,7 +8,7 @@ class Node(object):
         self.protocols = {}
         self.forwarding_table = {}
 
-        allNodes.append(self)
+        Sim.nodes.append(self)
 
     ## Links ## 
 
